@@ -175,7 +175,7 @@ class segment_impl : public segment
     {
         return sections;
     }
-    
+
 //------------------------------------------------------------------------------
     void
     set_index( Elf_Half value )

@@ -522,7 +522,7 @@ class elfio
     bool is_section_without_segment( unsigned int section_index )
     {
         bool found = false;
-        
+
         for ( unsigned int j = 0; !found && ( j < segments.size() ); ++j ) {
             for ( unsigned int k = 0;
                   !found && ( k < segments[j]->get_sections_num() );
@@ -555,7 +555,7 @@ class elfio
     {
         std::vector<segment*> res;
         std::deque<segment*>  worklist;
-        
+
         res.reserve(segments.size());
         std::copy( segments_.begin(), segments_.end(),
                    std::back_inserter( worklist )) ;
@@ -772,11 +772,11 @@ class elfio
         section* operator[]( std::size_t index ) const
         {
             section* sec = 0;
-            
+
             if ( index < parent->sections_.size() ) {
                 sec = parent->sections_[index];
             }
-            
+
             return sec;
         }
 
@@ -812,7 +812,7 @@ class elfio
 
             return new_section;
         }
-        
+
 //------------------------------------------------------------------------------
         std::vector<section*>::iterator begin() {
             return parent->sections_.begin();
