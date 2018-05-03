@@ -367,6 +367,10 @@ typedef uint64_t Elf64_Off;
 #define ELFOSABI_NSK     14 // Hewlett-Packard Non-Stop Kernel
 #define ELFOSABI_AROS    15 // Amiga Research OS
 #define ELFOSABI_FENIXOS 16 // The FenixOS highly scalable multi-core OS
+// DECOMPILER BEGIN
+#define ELFOSABI_CLOUDABI 17 // Nuxi CloudABI
+#define ELFOSABI_OPENVOS  18 // Stratus Technologies OpenVOS
+// DECOMPILER END
 //                       64-255 Architecture-specific value range
 
 // File flags
