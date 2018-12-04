@@ -68,7 +68,6 @@ class section
     virtual void load( std::istream& stream, size_t data_offset, size_t data_size ) = 0;
 };
 
-
 template< class T >
 class section_impl : public section
 {
@@ -102,14 +101,12 @@ class section_impl : public section
     ELFIO_GET_ACCESS    ( Elf64_Addr, address,            header.sh_addr      );
     ELFIO_GET_ACCESS    ( Elf64_Off,  offset,             header.sh_offset    );
 
-
 //------------------------------------------------------------------------------
     Elf_Half
     get_index() const
     {
         return index;
     }
-
 
 //------------------------------------------------------------------------------
     std::string

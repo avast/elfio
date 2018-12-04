@@ -56,7 +56,6 @@ class elf_header
     ELFIO_GET_SET_ACCESS_DECL( Elf_Half,      section_name_str_index );
 };
 
-
 template< class T > struct elf_header_impl_types;
 template<> struct elf_header_impl_types<Elf32_Ehdr> {
     typedef Elf32_Phdr Phdr_type;

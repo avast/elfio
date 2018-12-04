@@ -39,7 +39,6 @@ class string_section_accessor
     {
     }
 
-
 //------------------------------------------------------------------------------
 // DECOMPILER BEGIN
     std::string
@@ -89,7 +88,6 @@ class string_section_accessor
 
         return current_position;
     }
-
 
 //------------------------------------------------------------------------------
     Elf_Word

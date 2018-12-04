@@ -83,7 +83,6 @@ typedef uint64_t Elf64_Off;
 #define ET_LOPROC 0xFF00
 #define ET_HIPROC 0xFFFF
 
-
 #define EM_NONE          0   // No machine
 #define EM_M32           1   // AT&T WE 32100
 #define EM_SPARC         2   // SUN SPARC
@@ -376,8 +375,6 @@ typedef uint64_t Elf64_Off;
 // File flags
 #define EF_ARM_ABIMASK 0xFF000000
 
-
-
 /////////////////////
 // Sections constants
 
@@ -623,7 +620,6 @@ typedef uint64_t Elf64_Off;
 #define DF_BIND_NOW   0x8
 #define DF_STATIC_TLS 0x10
 
-
 // ELF file header
 struct Elf32_Ehdr {
     unsigned char e_ident[EI_NIDENT];
@@ -659,7 +655,6 @@ struct Elf64_Ehdr {
     Elf_Half    e_shstrndx;
 };
 
-
 // Section header
 struct Elf32_Shdr {
     Elf_Word   sh_name;
@@ -687,7 +682,6 @@ struct Elf64_Shdr {
     Elf_Xword  sh_entsize;
 };
 
-
 // Segment header
 struct Elf32_Phdr {
     Elf_Word   p_type;
@@ -711,7 +705,6 @@ struct Elf64_Phdr {
     Elf_Xword  p_align;
 };
 
-
 // Symbol table entry
 struct Elf32_Sym {
     Elf_Word      st_name;
@@ -731,13 +724,11 @@ struct Elf64_Sym {
     Elf_Xword     st_size;
 };
 
-
 #define ELF_ST_BIND(i)   ((i)>>4)
 #define ELF_ST_TYPE(i)   ((i)&0xf)
 #define ELF_ST_INFO(b,t) (((b)<<4)+((t)&0xf))
 
 #define ELF_ST_VISIBILITY(o) ((o)&0x3)
-
 
 // Relocation entries
 struct Elf32_Rel {
@@ -782,7 +773,6 @@ struct Elf64_Mips_Rela {
     Elf64_Byte r_type;
     Elf_Sxword r_addend;
 };
-
 
 #define ELF32_R_SYM(i)    ((i)>>8)
 #define ELF32_R_TYPE(i)   ((unsigned char)(i))

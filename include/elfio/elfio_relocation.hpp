@@ -71,7 +71,6 @@ template<> struct get_sym_and_type< Elf64_Rela >
     }
 };
 
-
 //------------------------------------------------------------------------------
 class relocation_section_accessor
 {

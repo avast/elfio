@@ -65,7 +65,6 @@ class segment
     virtual void load( std::istream& stream, size_t data_offset, size_t data_size ) = 0;
 };
 
-
 //------------------------------------------------------------------------------
 template< class T >
 class segment_impl : public segment
@@ -227,7 +226,6 @@ class segment_impl : public segment
         f.seekp( header_offset );
         f.write( reinterpret_cast<const char*>( &ph ), sizeof( ph ) );
     }
-
 
 //------------------------------------------------------------------------------
   public:

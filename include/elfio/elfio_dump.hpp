@@ -32,7 +32,6 @@ THE SOFTWARE.
 
 namespace ELFIO {
 
-
 static struct class_table_t {
     const char  key;
     const char* str;
@@ -41,7 +40,6 @@ static struct class_table_t {
     { ELFCLASS32, "ELF32" },
     { ELFCLASS64, "ELF64" },
 };
-
 
 static struct endian_table_t {
     const char  key;
@@ -53,7 +51,6 @@ static struct endian_table_t {
     { ELFDATA2MSB, "Big endian"    },
 };
 
-
 static struct version_table_t {
     const Elf64_Word key;
     const char*      str;
@@ -62,7 +59,6 @@ static struct version_table_t {
     { EV_NONE   , "None"    },
     { EV_CURRENT, "Current" },
 };
-
 
 static struct type_table_t {
     const Elf32_Half key;
@@ -75,7 +71,6 @@ static struct type_table_t {
     { ET_DYN , "Shared object file" },
     { ET_CORE, "Core file"          },
 };
-
 
 static struct machine_table_t {
     const Elf64_Half key;
@@ -278,7 +273,6 @@ static struct machine_table_t {
     { EM_CUDA         , "NVIDIA CUDA architecture"                                               },
 };
 
-
 static struct section_type_table_t {
     const Elf64_Half key;
     const char*      str;
@@ -303,7 +297,6 @@ static struct section_type_table_t {
     { SHT_SYMTAB_SHNDX , "SYMTAB_SHNDX " },
 };
 
-
 static struct segment_type_table_t {
     const Elf_Word key;
     const char*    str;
@@ -318,7 +311,6 @@ static struct segment_type_table_t {
     { PT_PHDR   , "PHDR"    },
     { PT_TLS    , "TLS"     },
 };
-
 
 static struct segment_flag_table_t {
     const Elf_Word key;
@@ -335,7 +327,6 @@ static struct segment_flag_table_t {
     { 7, "RWX" },
 };
 
-
 static struct symbol_bind_t {
     const Elf_Word key;
     const char*    str;
@@ -350,7 +341,6 @@ static struct symbol_bind_t {
     { STB_LOPROC  , "LOPROC"   },
     { STB_HIPROC  , "HIPROC"   },
 };
-
 
 static struct symbol_type_t {
     const Elf_Word key;
@@ -369,7 +359,6 @@ static struct symbol_type_t {
     { STT_LOPROC , "LOPROC"  },
     { STT_HIPROC , "HIPROC"  },
 };
-
 
 static struct dynamic_tag_t {
     const Elf_Word key;
@@ -890,7 +879,6 @@ class dump
         return res;
     }
 
-
 //------------------------------------------------------------------------------
     template< typename T, typename K >
     static
@@ -907,7 +895,6 @@ class dump
         return str;
     }
 
-
 //------------------------------------------------------------------------------
     template< typename T >
     static
@@ -916,7 +903,6 @@ class dump
     {
         return format_assoc( table, (const int)key );
     }
-
 
 //------------------------------------------------------------------------------
     static
@@ -936,7 +922,6 @@ class dump
 
         return ret;
     }
-
 
 //------------------------------------------------------------------------------
 #define STR_FUNC_TABLE( name )                    \
@@ -965,7 +950,6 @@ class dump
 #undef DUMP_HEX_FORMAT
 #undef DUMP_STR_FORMAT
 }; // class dump
-
 
 }; // namespace ELFIO
 

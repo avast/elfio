@@ -349,7 +349,6 @@ class elfio
         return new_section;
     }
 
-
 //------------------------------------------------------------------------------
     segment* create_segment()
     {
@@ -590,7 +589,6 @@ class elfio
         return res;
     }
 
-
 //------------------------------------------------------------------------------
     bool layout_sections_without_segments( )
     {
@@ -616,7 +614,6 @@ class elfio
 
         return true;
     }
-
 
 //------------------------------------------------------------------------------
     bool layout_segments_and_their_sections( )
@@ -750,7 +747,6 @@ class elfio
         return true;
     }
 
-
 //------------------------------------------------------------------------------
   public:
     friend class Sections;
@@ -850,7 +846,6 @@ class elfio
         {
             return parent->segments_[index];
         }
-
 
 //------------------------------------------------------------------------------
         segment* add()

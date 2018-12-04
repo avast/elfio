@@ -189,7 +189,6 @@ class endianess_convertor {
     bool need_conversion;
 };
 
-
 //------------------------------------------------------------------------------
 inline
 uint32_t
@@ -205,7 +204,6 @@ elf_hash( const unsigned char *name )
     }
     return h;
 }
-
 
 //------------------------------------------------------------------------------
 inline
