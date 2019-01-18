@@ -265,7 +265,9 @@ class section_impl : public section
 
         std::fill_n( reinterpret_cast<char*>( &header ), sizeof( header ), '\0' );
         stream.seekg( header_offset );
-        const size_t sz = std::min(sizeof( header ), file_length - header_offset);
+        const size_t headerSz = sizeof( header );
+        const size_t remainingSz = file_length - header_offset;
+        const size_t sz = std::min(headerSz, remainingSz);
         stream.read( reinterpret_cast<char*>( &header ), sz );
         const size_t section_offset = (*convertor)( header.sh_offset );
         if ( section_offset >= file_length ) {
