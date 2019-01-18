@@ -23,6 +23,7 @@ THE SOFTWARE.
 #ifndef ELFIO_SECTION_HPP
 #define ELFIO_SECTION_HPP
 
+#include <algorithm>
 #include <string>
 #include <iostream>
 
